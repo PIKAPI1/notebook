@@ -1,0 +1,23 @@
+create databases  ’数据库的名称‘创建 一个
+
+select distinct bookid from lirbary；不查询重复的值
+
+SELECT * FROM borrow
+ORDER BY bookid ASC,borrowdate DESC; bookid 从低到高排序 borrowdate 从高到低排序
+
+SELECT COUNT(*) as count_num   统计borrow表中numb的个数并新建一个组为 count_num
+FROM borrow
+where numb='1';
+
+SELECT sum(numb) FROM borrow; 把 borrow 表中的 numb 的值相加 利用sum（）函数
+
+select sum(numb)from borrow where bookid='C0001'; 统计bookid 然后将对应bookid的numb相加
+
+
+SELECT avg(numb) FROM borrow
+where bookid='C0001';  将bookid=c0001的列的numb进行统计平均值
+
+
+SELECT * from lirbary GROUP BY type; 查询 lirbary中 type的不同种类
+
+
